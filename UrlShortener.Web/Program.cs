@@ -70,6 +70,11 @@ public static class Program
         app.UseAuthorization();
 
         app.MapControllerRoute(
+            name: "redirect",
+            pattern: "r/{shortCode}",
+            defaults: new { controller = "Redirect", action = "RedirectToOriginal" });
+        
+        app.MapControllerRoute(
             name: "default",
             pattern: "{controller=Home}/{action=Index}/{id?}");
         

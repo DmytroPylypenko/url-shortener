@@ -2,11 +2,11 @@ using System.Text;
 using Microsoft.IdentityModel.Tokens;
 using UrlShortener.Web.Domain.Interfaces;
 using UrlShortener.Web.Services.Auth;
-using UrlShortener.Web.Utilities;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using UrlShortener.Web.Persistence;
 using UrlShortener.Web.Persistence.Repositories;
+using UrlShortener.Web.Services.UrlShortening;
 
 namespace UrlShortener.Web;
 
@@ -25,6 +25,8 @@ public static class Program
         builder.Services.AddScoped<IPasswordHasher, PbkdfPasswordHasher>();
         builder.Services.AddScoped<ITokenService, TokenService>();
         builder.Services.AddScoped<IUserRepository, UserRepository>();
+        builder.Services.AddScoped<IShortCodeGenerator, Base62ShortCodeGenerator>();
+        builder.Services.AddScoped<IUrlShorteningService, UrlShorteningService>();
         
         // Add and configure JWT Authentication
         var jwtKey = builder.Configuration["JwtSettings:Key"];

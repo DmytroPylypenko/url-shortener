@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using UrlShortener.Web.Domain.Interfaces;
 using UrlShortener.Web.Models;
 
-namespace UrlShortener.Web.Controllers;
+namespace UrlShortener.Web.Controllers.Api;
 
 /// <summary>
 /// Provides endpoints for authenticating users and issuing JWT tokens.

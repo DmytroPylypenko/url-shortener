@@ -1,7 +1,7 @@
 using System.Security.Cryptography;
 using UrlShortener.Web.Domain.Interfaces;
 
-namespace UrlShortener.Web.Utilities;
+namespace UrlShortener.Web.Services.Auth;
 
 /// <summary>
 /// Implements secure password hashing using the PBKDF2 algorithm.

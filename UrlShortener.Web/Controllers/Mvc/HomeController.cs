@@ -2,16 +2,10 @@ using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using UrlShortener.Web.Models;
 
-namespace UrlShortener.Web.Controllers;
+namespace UrlShortener.Web.Controllers.Mvc;
 
 public class HomeController : Controller
 {
-    private readonly ILogger<HomeController> _logger;
-
-    public HomeController(ILogger<HomeController> logger)
-    {
-        _logger = logger;
-    }
 
     public IActionResult Index()
     {

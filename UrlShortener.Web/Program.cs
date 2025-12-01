@@ -4,6 +4,7 @@ using UrlShortener.Web.Domain.Interfaces;
 using UrlShortener.Web.Services.Auth;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
+using UrlShortener.Web.Configuration;
 using UrlShortener.Web.Persistence;
 using UrlShortener.Web.Persistence.Repositories;
 using UrlShortener.Web.Services.UrlShortening;
@@ -21,10 +22,16 @@ public static class Program
 
         builder.Services.AddDbContext<ApplicationDbContext>(options =>
             options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+       
+        builder.Services.Configure<ApiSettings>(
+            builder.Configuration.GetSection("ApiSettings"));
+        
+        builder.Services.AddHttpClient();
         
         builder.Services.AddScoped<IPasswordHasher, PbkdfPasswordHasher>();
         builder.Services.AddScoped<ITokenService, TokenService>();
         builder.Services.AddScoped<IUserRepository, UserRepository>();
+        builder.Services.AddScoped<IUrlRecordRepository, UrlRecordRepository>();
         builder.Services.AddScoped<IShortCodeGenerator, Base62ShortCodeGenerator>();
         builder.Services.AddScoped<IUrlShorteningService, UrlShorteningService>();
         
@@ -69,6 +76,18 @@ public static class Program
         app.UseAuthentication();
         app.UseAuthorization();
 
+        // Take JWT from cookie and attach it to every API call
+        app.Use(async (context, next) =>
+        {
+            if (context.Request.Cookies.TryGetValue("auth_token", out var token))
+            {
+                context.Request.Headers.Authorization =
+                    new System.Net.Http.Headers.AuthenticationHeaderValue("Bearer", token).ToString();
+            }
+
+            await next();
+        });
+        
         app.MapControllerRoute(
             name: "redirect",
             pattern: "r/{shortCode}",

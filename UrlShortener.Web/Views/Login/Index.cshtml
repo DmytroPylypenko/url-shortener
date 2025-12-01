@@ -1,0 +1,26 @@
+@model UrlShortener.Web.Models.Auth.LoginViewModel
+
+<div class="container mt-5" style="max-width: 400px;">
+    <h2 class="mb-4">Login</h2>
+
+    @if (Model.ErrorMessage != null)
+    {
+        <div class="alert alert-danger">@Model.ErrorMessage</div>
+    }
+
+    <form method="post">
+        <div class="mb-3">
+            <label asp-for="Email" for="Email" class="form-label"></label>
+            <input asp-for="Email" id="Email" name="Email" class="form-control" />
+            <span asp-validation-for="Email" class="text-danger"></span>
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="Password" for="Password" class="form-label"></label>
+            <input asp-for="Password" id="Password" name="Password" type="password" class="form-control" />
+            <span asp-validation-for="Password" class="text-danger"></span>
+        </div>
+
+        <button type="submit" class="btn btn-primary w-100">Login</button>
+    </form>
+</div>

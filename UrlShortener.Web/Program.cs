@@ -1,6 +1,13 @@
+using System.Text;
+using Microsoft.IdentityModel.Tokens;
+using UrlShortener.Web.Domain.Interfaces;
+using UrlShortener.Web.Services.Auth;
+using UrlShortener.Web.Utilities;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+
 namespace UrlShortener.Web;
 
-public class Program
+public static class Program
 {
     public static void Main(string[] args)
     {
@@ -9,6 +16,32 @@ public class Program
         // Add services to the container.
         builder.Services.AddControllersWithViews();
 
+        builder.Services.AddScoped<IPasswordHasher, PbkdfPasswordHasher>();
+        builder.Services.AddScoped<ITokenService, TokenService>();
+        
+        // Add and configure JWT Authentication
+        var jwtKey = builder.Configuration["JwtSettings:Key"];
+        builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+            .AddJwtBearer(options =>
+            {
+                options.TokenValidationParameters = new TokenValidationParameters
+                {
+                    ValidateIssuer = true,
+                    ValidIssuer = builder.Configuration["JwtSettings:Issuer"],
+
+                    ValidateAudience = true,
+                    ValidAudience = builder.Configuration["JwtSettings:Audience"],
+
+                    ValidateIssuerSigningKey = true,
+                    IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(jwtKey!)),
+
+                    ValidateLifetime = true,
+                    ClockSkew = TimeSpan.Zero
+                };
+            });
+        
+        builder.Services.AddAuthorization();
+        
         var app = builder.Build();
 
         // Configure the HTTP request pipeline.
@@ -24,6 +57,7 @@ public class Program
 
         app.UseRouting();
 
+        app.UseAuthentication();
         app.UseAuthorization();
 
         app.MapControllerRoute(

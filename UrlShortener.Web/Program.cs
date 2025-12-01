@@ -4,6 +4,9 @@ using UrlShortener.Web.Domain.Interfaces;
 using UrlShortener.Web.Services.Auth;
 using UrlShortener.Web.Utilities;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.EntityFrameworkCore;
+using UrlShortener.Web.Persistence;
+using UrlShortener.Web.Persistence.Repositories;
 
 namespace UrlShortener.Web;
 
@@ -16,8 +19,12 @@ public static class Program
         // Add services to the container.
         builder.Services.AddControllersWithViews();
 
+        builder.Services.AddDbContext<ApplicationDbContext>(options =>
+            options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+        
         builder.Services.AddScoped<IPasswordHasher, PbkdfPasswordHasher>();
         builder.Services.AddScoped<ITokenService, TokenService>();
+        builder.Services.AddScoped<IUserRepository, UserRepository>();
         
         // Add and configure JWT Authentication
         var jwtKey = builder.Configuration["JwtSettings:Key"];
@@ -63,7 +70,7 @@ public static class Program
         app.MapControllerRoute(
             name: "default",
             pattern: "{controller=Home}/{action=Index}/{id?}");
-
+        
         app.Run();
     }
 }

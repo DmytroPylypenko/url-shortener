@@ -10,12 +10,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="79f393e7-8b4f-42ce-be3c-7b0c2cd2f2f3" name="Changes" comment="feat(info): implement Short URL Info View and routing">
-      <change afterPath="$PROJECT_DIR$/UrlShortener.Web/Controllers/Mvc/InfoController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/UrlShortener.Web/Views/Info/Index.cshtml" afterDir="false" />
+    <list default="true" id="79f393e7-8b4f-42ce-be3c-7b0c2cd2f2f3" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/UrlShortener.Web/Controllers/Mvc/AboutController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UrlShortener.Web/Domain/Interfaces/IAboutContentRepository.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UrlShortener.Web/Persistence/Repositories/AboutContentRepository.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UrlShortener.Web/Views/About/Index.cshtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.UrlShortener/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UrlShortener/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UrlShortener.Client/src/app/features/urls/url-list.html" beforeDir="false" afterPath="$PROJECT_DIR$/UrlShortener.Client/src/app/features/urls/url-list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UrlShortener.Web/wwwroot/urls/browser/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/UrlShortener.Web/wwwroot/urls/browser/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UrlShortener.Web/Controllers/Mvc/HomeController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/UrlShortener.Web/Controllers/Mvc/HomeController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UrlShortener.Web/Controllers/Mvc/InfoController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/UrlShortener.Web/Controllers/Mvc/InfoController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UrlShortener.Web/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/UrlShortener.Web/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UrlShortener.Web/Views/Shared/_Layout.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/UrlShortener.Web/Views/Shared/_Layout.cshtml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,8 +43,12 @@
     <setting file="mock:///home/dima/Dima/UrlShortener/UrlShortener.Web/Controllers/Api/ManageUrlsController.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/UrlShortener.Web/Controllers/Api/ManageUrlsController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/UrlShortener.Web/Controllers/Api/PublicUrlsController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/UrlShortener.Web/Controllers/Mvc/AboutController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="mock:///home/dima/Dima/UrlShortener/UrlShortener.Web/Controllers/Mvc/HomeController.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///home/dima/Dima/UrlShortener/UrlShortener.Web/Controllers/Mvc/HomeController.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///home/dima/Dima/UrlShortener/UrlShortener.Web/Controllers/Mvc/HomeController.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///home/dima/Dima/UrlShortener/UrlShortener.Web/Controllers/Mvc/InfoController.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///home/dima/Dima/UrlShortener/UrlShortener.Web/Controllers/Mvc/InfoController.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/UrlShortener.Web/Controllers/Mvc/InfoController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="mock:///home/dima/Dima/UrlShortener/UrlShortener.Web/Controllers/Mvc/LoginController.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///home/dima/Dima/UrlShortener/UrlShortener.Web/Controllers/Mvc/LoginController.cs" root0="SKIP_HIGHLIGHTING" />
@@ -50,6 +58,7 @@
     <setting file="file://$PROJECT_DIR$/UrlShortener.Web/Domain/Entities/AboutContent.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/UrlShortener.Web/Domain/Entities/UrlRecord.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/UrlShortener.Web/Domain/Entities/User.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/UrlShortener.Web/Domain/Interfaces/IAboutContentRepository.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/UrlShortener.Web/Domain/Interfaces/IPasswordHasher.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/UrlShortener.Web/Domain/Interfaces/IShortCodeGenerator.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/UrlShortener.Web/Domain/Interfaces/ITokenService.cs" root0="FORCE_HIGHLIGHTING" />
@@ -64,17 +73,22 @@
     <setting file="file://$PROJECT_DIR$/UrlShortener.Web/Models/Url/UrlRecordDetailsDto.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/UrlShortener.Web/Models/Url/UrlRecordListItemDto.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/UrlShortener.Web/Persistence/ApplicationDbContext.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/UrlShortener.Web/Persistence/Repositories/AboutContentRepository.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/UrlShortener.Web/Persistence/Repositories/UrlRecordRepository.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/UrlShortener.Web/Persistence/Repositories/UserRepository.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock:///home/dima/Dima/UrlShortener/UrlShortener.Web/Program.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///home/dima/Dima/UrlShortener/UrlShortener.Web/Program.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///home/dima/Dima/UrlShortener/UrlShortener.Web/Program.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///home/dima/Dima/UrlShortener/UrlShortener.Web/Program.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/UrlShortener.Web/Services/Auth/PbkdfPasswordHasher.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/UrlShortener.Web/Services/Auth/TokenService.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/UrlShortener.Web/Services/UrlShortening/Base62ShortCodeGenerator.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/UrlShortener.Web/Services/UrlShortening/UrlShorteningService.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/UrlShortener.Web/Views/About/Index.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="FORCE_HIGHLIGHTING" />
     <setting file="mock:///home/dima/Dima/UrlShortener/UrlShortener.Web/Views/Home/Index.cshtml" root0="FORCE_HIGHLIGHTING" root1="SKIP_HIGHLIGHTING" root2="FORCE_HIGHLIGHTING" />
     <setting file="mock:///home/dima/Dima/UrlShortener/UrlShortener.Web/Views/Home/Index.cshtml" root0="FORCE_HIGHLIGHTING" root1="SKIP_HIGHLIGHTING" root2="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/UrlShortener.Web/Views/Info/Index.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="FORCE_HIGHLIGHTING" />
+    <setting file="mock:///home/dima/Dima/UrlShortener/UrlShortener.Web/Views/Shared/_Layout.cshtml" root0="FORCE_HIGHLIGHTING" root1="SKIP_HIGHLIGHTING" root2="FORCE_HIGHLIGHTING" />
     <setting file="mock:///home/dima/Dima/UrlShortener/UrlShortener.Web/Views/Shared/_Layout.cshtml" root0="FORCE_HIGHLIGHTING" root1="SKIP_HIGHLIGHTING" root2="FORCE_HIGHLIGHTING" />
     <setting file="mock:///home/dima/Dima/UrlShortener/UrlShortener.Web/Views/Shared/_Layout.cshtml" root0="FORCE_HIGHLIGHTING" root1="SKIP_HIGHLIGHTING" root2="FORCE_HIGHLIGHTING" />
     <setting file="mock:///home/dima/Dima/UrlShortener/UrlShortener.Web/Views/Shared/_Layout.cshtml" root0="FORCE_HIGHLIGHTING" root1="SKIP_HIGHLIGHTING" root2="FORCE_HIGHLIGHTING" />
@@ -199,7 +213,7 @@
       <workItem from="1764592331872" duration="446000" />
       <workItem from="1764592860277" duration="12567000" />
       <workItem from="1764606935866" duration="2372000" />
-      <workItem from="1764685323183" duration="11634000" />
+      <workItem from="1764685323183" duration="13534000" />
     </task>
     <task id="LOCAL-00001" summary="chore: create ASP.NET Core MVC solution">
       <option name="closed" value="true" />
@@ -369,7 +383,15 @@
       <option name="project" value="LOCAL" />
       <updated>1764695455479</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="feat(info): implement Short URL Info View and routing">
+      <option name="closed" value="true" />
+      <created>1764697024854</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1764697024854</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

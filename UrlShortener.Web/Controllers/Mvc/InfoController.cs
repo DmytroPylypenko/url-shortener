@@ -24,16 +24,17 @@ public class InfoController : Controller
     /// Fetches URL details and renders the Info view.
     /// </summary>
     /// <param name="id">The unique ID of the URL record.</param>
+    /// /// <param name="token">Cancellation token.</param>
     /// <returns>A view displaying the detailed information.</returns>
     [HttpGet("urls/info/{id:int}")] // Defines a clear, specific route
-    public async Task<IActionResult> Index(int id)
+    public async Task<IActionResult> Index(int id, CancellationToken token)
     {
         if (id <= 0)
         {
             return BadRequest("Invalid URL ID specified.");
         }
         
-        var record = await _repository.GetByIdAsync(id, CancellationToken.None);
+        var record = await _repository.GetByIdAsync(id, token);
 
         if (record == null)
         {

@@ -35,6 +35,7 @@ public static class Program
         builder.Services.AddScoped<IUrlRecordRepository, UrlRecordRepository>();
         builder.Services.AddScoped<IShortCodeGenerator, Base62ShortCodeGenerator>();
         builder.Services.AddScoped<IUrlShorteningService, UrlShorteningService>();
+        builder.Services.AddScoped<IAboutContentRepository, AboutContentRepository>(); 
         
         // Add and configure JWT Authentication
         var jwtKey = builder.Configuration["JwtSettings:Key"];

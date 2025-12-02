@@ -1,0 +1,53 @@
+@model UrlShortener.Web.Domain.Entities.AboutContent
+
+@{
+    ViewData["Title"] = "About Algorithm";
+    var isAdmin = ViewData["IsAdmin"] as bool? ?? false;
+}
+
+<div class="container mt-5">
+    <h1 class="display-4 mb-4">The Shortening Algorithm</h1>
+
+    @if (isAdmin)
+    {
+        <div class="card shadow-sm mb-5 border-warning">
+            <div class="card-header bg-warning-subtle text-dark">
+                <i class="bi bi-pencil-square me-2"></i> Admin Editing Mode
+            </div>
+            <div class="card-body">
+                <form asp-controller="About" asp-action="Index" method="post">
+                    <div class="mb-3">
+                        <textarea 
+                            name="Content"                     
+                            id="Content" 
+                            class="form-control" 
+                            rows="10" 
+                            placeholder="Describe your algorithm here...">@Model.Content</textarea>
+                        @Html.ValidationMessageFor(m => m.Content, null, new { @class = "text-danger" })
+                    </div>
+                    <button type="submit" class="btn btn-warning">Save Content</button>
+                </form>
+            </div>
+        </div>
+    }
+    
+    <div class="card shadow-sm">
+        <div class="card-body">
+            <h5 class="card-title mb-3">Algorithm Description</h5>
+            <p class="card-text" style="white-space: pre-wrap;">@Model.Content</p>
+            
+            <hr class="my-4" />
+            <p class="text-muted small mb-0">
+                Last Updated: @Model.LastUpdatedAtUtc.ToLocalTime()
+                @if (Model.UpdatedByUser != null)
+                {
+                    <span>by @Model.UpdatedByUser.Name</span>
+                }
+            </p>
+        </div>
+    </div>
+    
+    <div class="mt-4">
+        <a asp-controller="Home" asp-action="Index" class="btn btn-secondary">Back to Home</a>
+    </div>
+</div>

@@ -8,6 +8,7 @@ namespace UrlShortener.Web.Controllers.Mvc;
 /// Publicly accessible to everyone.
 /// </summary>
 [ApiExplorerSettings(IgnoreApi = true)]
+[Route("")]
 public class RedirectController : Controller
 {
     private readonly IUrlRecordRepository _repository;

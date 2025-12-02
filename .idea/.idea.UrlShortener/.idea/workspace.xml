@@ -11,15 +11,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="79f393e7-8b4f-42ce-be3c-7b0c2cd2f2f3" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/UrlShortener.Web/Controllers/Mvc/AboutController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/UrlShortener.Web/Domain/Interfaces/IAboutContentRepository.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/UrlShortener.Web/Persistence/Repositories/AboutContentRepository.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/UrlShortener.Web/Views/About/Index.cshtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UrlShortener.Tests/Controllers/Api/AuthControllerTests.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UrlShortener.Tests/Controllers/Api/ManageUrlsControllerTests.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UrlShortener.Tests/Controllers/Api/PublicUrlsControllerTests.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UrlShortener.Tests/Controllers/Mvc/AboutControllerTests.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UrlShortener.Tests/Controllers/Mvc/InfoControllerTests.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UrlShortener.Tests/Controllers/Mvc/LoginControllerTests.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UrlShortener.Tests/Controllers/Mvc/RedirectControllerTests.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UrlShortener.Tests/Persistence/Repositories/AboutContentRepositoryTests.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UrlShortener.Tests/Persistence/Repositories/UrlRecordRepositoryTests.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UrlShortener.Tests/Persistence/Repositories/UserRepositoryTests.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UrlShortener.Tests/Services/Auth/PasswordHasherTests.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UrlShortener.Tests/Services/Auth/TokenServiceTests.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UrlShortener.Tests/Services/UrlShortening/Base62ShortCodeGeneratorTests.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UrlShortener.Tests/Services/UrlShortening/UrlShorteningServiceTests.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.UrlShortener/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UrlShortener/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UrlShortener.Web/Controllers/Mvc/HomeController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/UrlShortener.Web/Controllers/Mvc/HomeController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UrlShortener.Web/Controllers/Mvc/InfoController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/UrlShortener.Web/Controllers/Mvc/InfoController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UrlShortener.Web/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/UrlShortener.Web/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UrlShortener.Web/Views/Shared/_Layout.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/UrlShortener.Web/Views/Shared/_Layout.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UrlShortener.Web/Controllers/Api/PublicUrlsController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/UrlShortener.Web/Controllers/Api/PublicUrlsController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UrlShortener.Web/Controllers/Mvc/RedirectController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/UrlShortener.Web/Controllers/Mvc/RedirectController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UrlShortener.sln" beforeDir="false" afterPath="$PROJECT_DIR$/UrlShortener.sln" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,6 +46,20 @@
     <setting file="mock:///home/dima/Dima/UrlShortener/UrlShortener.Client/angular.json" root0="FORCE_HIGHLIGHTING" />
     <setting file="mock:///home/dima/Dima/UrlShortener/UrlShortener.Client/angular.json" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/UrlShortener.Client/angular.json" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/UrlShortener.Tests/Controllers/Api/AuthControllerTests.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/UrlShortener.Tests/Controllers/Api/ManageUrlsControllerTests.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/UrlShortener.Tests/Controllers/Api/PublicUrlsControllerTests.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/UrlShortener.Tests/Controllers/Mvc/AboutControllerTests.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/UrlShortener.Tests/Controllers/Mvc/InfoControllerTests.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/UrlShortener.Tests/Controllers/Mvc/LoginControllerTests.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/UrlShortener.Tests/Controllers/Mvc/RedirectControllerTests.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/UrlShortener.Tests/Persistence/Repositories/AboutContentRepositoryTests.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/UrlShortener.Tests/Persistence/Repositories/UrlRecordRepositoryTests.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/UrlShortener.Tests/Persistence/Repositories/UserRepositoryTests.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/UrlShortener.Tests/Services/Auth/PasswordHasherTests.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/UrlShortener.Tests/Services/Auth/TokenServiceTests.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/UrlShortener.Tests/Services/UrlShortening/Base62ShortCodeGeneratorTests.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/UrlShortener.Tests/Services/UrlShortening/UrlShorteningServiceTests.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/UrlShortener.Web/Configuration/ApiSettings.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="mock:///home/dima/Dima/UrlShortener/UrlShortener.Web/Controllers/Api/AuthController.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/UrlShortener.Web/Controllers/Api/AuthController.cs" root0="FORCE_HIGHLIGHTING" />
@@ -213,7 +236,7 @@
       <workItem from="1764592331872" duration="446000" />
       <workItem from="1764592860277" duration="12567000" />
       <workItem from="1764606935866" duration="2372000" />
-      <workItem from="1764685323183" duration="13534000" />
+      <workItem from="1764685323183" duration="18767000" />
     </task>
     <task id="LOCAL-00001" summary="chore: create ASP.NET Core MVC solution">
       <option name="closed" value="true" />
@@ -391,7 +414,15 @@
       <option name="project" value="LOCAL" />
       <updated>1764697024854</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="feat(fullstack): implement About View">
+      <option name="closed" value="true" />
+      <created>1764699000128</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1764699000128</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -433,7 +464,8 @@
     <MESSAGE value="feat(fullstack): finalize Angular integration, solve an navbar issue, create UrlsController.cs for entry point for Angular" />
     <MESSAGE value="fix(layout): display user role in navbar when name claim is missing" />
     <MESSAGE value="feat(info): implement Short URL Info View and routing" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat(info): implement Short URL Info View and routing" />
+    <MESSAGE value="feat(fullstack): implement About View" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat(fullstack): implement About View" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

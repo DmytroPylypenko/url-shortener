@@ -57,13 +57,18 @@ public class PublicUrlsController : ControllerBase
     /// <param name="id">The unique identifier of the URL record.</param>
     /// <param name="token">Cancellation token for the asynchronous operation.</param>
     /// <returns>
-    /// HTTP 200 with <see cref="UrlRecordDetailsDto"/> if found;
-    /// HTTP 404 if not found.
+    /// <para><b>200 OK</b> with a <see cref="UrlRecordDetailsDto"/> if the record exists.</para>
+    /// <para><b>401 Unauthorized</b> if the user is not authenticated.</para>
+    /// <para><b>404 Not Found</b> if no URL record matches the provided ID.</para>
     /// </returns>
     [HttpGet("{id:int}")]
     [Authorize]
     public async Task<IActionResult> GetById(int id, CancellationToken token)
     {
+        // Ensure the request comes from an authenticated user (for tests)
+        if (!User.Identity?.IsAuthenticated ?? false)
+            return Unauthorized();
+        
         // 1. Look up the record.
         var record = await _repository.GetByIdAsync(id, token);
         if (record is null)

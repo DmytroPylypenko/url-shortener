@@ -1,4 +1,8 @@
-﻿<!DOCTYPE html>
+﻿@using System.Security.Claims
+@{
+    var userRole = User.FindFirstValue(ClaimTypes.Role);
+}
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
@@ -36,7 +40,7 @@
                         @if (User.Identity?.IsAuthenticated == true)
                         {
                             <li class="nav-item d-flex align-items-center">
-                                <span class="nav-link text-dark me-2">Hello, <b>@User.Identity.Name</b></span>
+                                <span class="nav-link text-dark me-2">Hello, <b>@userRole</b></span>
                             </li>
                             <li class="nav-item">
                                 <a class="btn btn-outline-danger btn-sm" asp-controller="Login" asp-action="Logout">Logout</a>

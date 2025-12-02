@@ -10,8 +10,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="79f393e7-8b4f-42ce-be3c-7b0c2cd2f2f3" name="Changes" comment="feat(fullstack): finalize Angular integration, solve an navbar issue, create UrlsController.cs for entry point for Angular">
-      <change beforePath="$PROJECT_DIR$/UrlShortener.Web/wwwroot/urls/browser/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/UrlShortener.Web/wwwroot/urls/browser/index.html" afterDir="false" />
+    <list default="true" id="79f393e7-8b4f-42ce-be3c-7b0c2cd2f2f3" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/UrlShortener.Web/Views/Shared/_Layout.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/UrlShortener.Web/Views/Shared/_Layout.cshtml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -191,7 +191,7 @@
       <workItem from="1764592331872" duration="446000" />
       <workItem from="1764592860277" duration="12567000" />
       <workItem from="1764606935866" duration="2372000" />
-      <workItem from="1764685323183" duration="9708000" />
+      <workItem from="1764685323183" duration="10011000" />
     </task>
     <task id="LOCAL-00001" summary="chore: create ASP.NET Core MVC solution">
       <option name="closed" value="true" />
@@ -345,7 +345,15 @@
       <option name="project" value="LOCAL" />
       <updated>1764695042693</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="feat(fullstack): finalize Angular integration, solve an navbar issue, create UrlsController.cs for entry point for Angular">
+      <option name="closed" value="true" />
+      <created>1764695051175</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1764695051175</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

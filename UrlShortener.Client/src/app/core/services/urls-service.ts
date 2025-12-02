@@ -25,7 +25,7 @@ export class UrlsService {
    * @returns Observable emitting an array of {@link UrlRecordListItem}.
    */
   getAll(): Observable<UrlRecordListItem[]> {
-    return this.http.get<UrlRecordListItem[]>(this.publicApi);
+    return this.http.get<UrlRecordListItem[]>(this.publicApi, { withCredentials: true });
   }
 
   /**
@@ -35,17 +35,17 @@ export class UrlsService {
    * @returns Observable emitting the URL details.
    */
   getById(id: number): Observable<any> {
-    return this.http.get<any>(`${this.publicApi}/${id}`);
+    return this.http.get<any>(`${this.publicApi}/${id}`, { withCredentials: true });
   }
 
-/**
+  /**
    * Creates a new shortened URL for the authenticated user.
    *
    * @param model Request payload containing the original long URL.
    * @returns Observable emitting the created short URL record.
    */
   create(model: CreateShortUrlRequest): Observable<CreateShortUrlResponse> {
-    return this.http.post<CreateShortUrlResponse>(this.manageApi, model);
+    return this.http.post<CreateShortUrlResponse>(this.manageApi, model, { withCredentials: true });
   }
 
   /**
@@ -55,6 +55,6 @@ export class UrlsService {
    * @returns Observable emitting the created short URL record.
    */
   delete(id: number): Observable<void> {
-    return this.http.delete<void>(`${this.manageApi}/${id}`);
+    return this.http.delete<void>(`${this.manageApi}/${id}`, { withCredentials: true });
   }
 }

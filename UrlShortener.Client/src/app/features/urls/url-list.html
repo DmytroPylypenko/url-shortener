@@ -1,0 +1,51 @@
+<div class="container mt-4">
+  <h2 class="mb-3">Shortened URLs</h2>
+
+  @if(errorMessage) {
+  <div class="alert alert-danger">
+    {{ errorMessage }}
+  </div>
+  }
+
+  <!-- Add new URL (only for authenticated users — protected by backend) -->
+  <div class="card mb-4 p-3">
+    <h5>Add a new URL</h5>
+    <div class="input-group">
+      <input [(ngModel)]="newUrl" class="form-control" placeholder="Enter URL to shorten" />
+      <button class="btn btn-primary" (click)="createUrl()">Shorten</button>
+    </div>
+  </div>
+
+  <!-- URL Table -->
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Original URL</th>
+        <th>Short Code</th>
+        <th>Created By</th>
+        <th>Created At</th>
+        <th>Visits</th>
+        <th style="width: 80px"></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      @for(url of urls; track url.id) {
+      <tr>
+        <td>{{ url.originalUrl }}</td>
+        <td>
+          <a [href]="'https://localhost:7255/' + url.shortCode" target="_blank">
+            {{ url.shortCode }}
+          </a>
+        </td>
+        <td>{{ url.createdBy }}</td>
+        <td>{{ url.createdAtUtc | date : 'short' }}</td>
+        <td>{{ url.visitCount }}</td>
+        <td>
+          <button class="btn btn-danger btn-sm" (click)="deleteUrl(url.id)">Delete</button>
+        </td>
+      </tr>
+      }
+    </tbody>
+  </table>
+</div>

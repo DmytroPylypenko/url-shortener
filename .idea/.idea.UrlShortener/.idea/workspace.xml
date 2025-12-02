@@ -12,12 +12,13 @@
   <component name="ChangeListManager">
     <list default="true" id="79f393e7-8b4f-42ce-be3c-7b0c2cd2f2f3" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.UrlShortener/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UrlShortener/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UrlShortener.Client/src/app/app.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/UrlShortener.Client/src/app/app.config.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UrlShortener.Client/src/app/app.html" beforeDir="false" afterPath="$PROJECT_DIR$/UrlShortener.Client/src/app/app.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UrlShortener.Client/src/app/app.routes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/UrlShortener.Client/src/app/app.routes.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UrlShortener.Client/src/app/core/services/urls-service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/UrlShortener.Client/src/app/core/services/urls-service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UrlShortener.Client/angular.json" beforeDir="false" afterPath="$PROJECT_DIR$/UrlShortener.Client/angular.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UrlShortener.Client/src/app/features/urls/url-list.html" beforeDir="false" afterPath="$PROJECT_DIR$/UrlShortener.Client/src/app/features/urls/url-list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UrlShortener.Client/src/app/features/urls/url-list.scss" beforeDir="false" afterPath="$PROJECT_DIR$/UrlShortener.Client/src/app/features/urls/url-list.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UrlShortener.Client/src/environments/environment.ts" beforeDir="false" afterPath="$PROJECT_DIR$/UrlShortener.Client/src/environments/environment.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UrlShortener.Client/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/UrlShortener.Client/src/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UrlShortener.Web/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/UrlShortener.Web/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UrlShortener.Web/UrlShortener.Web.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/UrlShortener.Web/UrlShortener.Web.csproj" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,6 +32,8 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="mock:///home/dima/Dima/UrlShortener/UrlShortener.Client/angular.json" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/UrlShortener.Client/angular.json" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/UrlShortener.Web/Configuration/ApiSettings.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/UrlShortener.Web/Controllers/Api/AuthController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/UrlShortener.Web/Controllers/Api/ManageUrlsController.cs" root0="FORCE_HIGHLIGHTING" />
@@ -57,18 +60,10 @@
     <setting file="file://$PROJECT_DIR$/UrlShortener.Web/Persistence/Repositories/UrlRecordRepository.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/UrlShortener.Web/Persistence/Repositories/UserRepository.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="mock:///home/dima/Dima/UrlShortener/UrlShortener.Web/Program.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///home/dima/Dima/UrlShortener/UrlShortener.Web/Program.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///home/dima/Dima/UrlShortener/UrlShortener.Web/Program.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///home/dima/Dima/UrlShortener/UrlShortener.Web/Program.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///home/dima/Dima/UrlShortener/UrlShortener.Web/Program.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///home/dima/Dima/UrlShortener/UrlShortener.Web/Program.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/UrlShortener.Web/Services/Auth/PbkdfPasswordHasher.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/UrlShortener.Web/Services/Auth/TokenService.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/UrlShortener.Web/Services/UrlShortening/Base62ShortCodeGenerator.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/UrlShortener.Web/Services/UrlShortening/UrlShorteningService.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock:///home/dima/Dima/UrlShortener/UrlShortener.Web/appsettings.Development.json" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock:///home/dima/Dima/UrlShortener/UrlShortener.Web/appsettings.json" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock:///home/dima/Dima/UrlShortener/UrlShortener.Web/appsettings.json" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProblemsViewState">
@@ -187,6 +182,7 @@
       <workItem from="1764592331872" duration="446000" />
       <workItem from="1764592860277" duration="12567000" />
       <workItem from="1764606935866" duration="2372000" />
+      <workItem from="1764685323183" duration="5210000" />
     </task>
     <task id="LOCAL-00001" summary="chore: create ASP.NET Core MVC solution">
       <option name="closed" value="true" />

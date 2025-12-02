@@ -4,6 +4,7 @@ using UrlShortener.Web.Domain.Interfaces;
 using UrlShortener.Web.Services.Auth;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.FileProviders;
 using UrlShortener.Web.Configuration;
 using UrlShortener.Web.Persistence;
 using UrlShortener.Web.Persistence.Repositories;
@@ -69,23 +70,41 @@ public static class Program
         }
 
         app.UseHttpsRedirection();
+        
         app.UseStaticFiles();
-
         app.UseRouting();
-
-        app.UseAuthentication();
-        app.UseAuthorization();
 
         // Take JWT from cookie and attach it to every API call
         app.Use(async (context, next) =>
         {
             if (context.Request.Cookies.TryGetValue("auth_token", out var token))
             {
-                context.Request.Headers.Authorization =
-                    new System.Net.Http.Headers.AuthenticationHeaderValue("Bearer", token).ToString();
+                context.Request.Headers.Authorization = $"Bearer {token}";
             }
 
             await next();
+        });
+        
+        app.UseAuthentication();
+        app.UseAuthorization();
+
+        // Serve Angular app from /urls
+        app.MapWhen(ctx => ctx.Request.Path.StartsWithSegments("/urls"), clientApp =>
+        {
+            clientApp.UseStaticFiles(new StaticFileOptions
+            {
+                FileProvider = new PhysicalFileProvider(
+                    Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "urls", "browser")
+                ),
+                RequestPath = "/urls"
+            });
+
+            clientApp.Run(async context =>
+            {
+                context.Response.ContentType = "text/html";
+                await context.Response.SendFileAsync(
+                    Path.Combine("wwwroot", "urls", "browser", "index.html"));
+            });
         });
         
         app.MapControllerRoute(

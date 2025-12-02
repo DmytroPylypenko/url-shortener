@@ -17,6 +17,7 @@
         "build": {
           "builder": "@angular/build:application",
           "options": {
+            "outputPath": "../UrlShortener.Web/wwwroot/urls",
             "browser": "src/main.ts",
             "polyfills": [
               "zone.js"

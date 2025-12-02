@@ -1,0 +1,22 @@
+.table td {
+  vertical-align: middle;
+}
+
+.url-cell {
+  max-width: 350px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.shortcode-cell a {
+  font-weight: 600;
+}
+
+.createdby-cell {
+  font-weight: 500;
+}
+
+.delete-btn {
+  padding: 2px 10px;
+}

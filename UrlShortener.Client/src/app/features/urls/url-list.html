@@ -25,24 +25,37 @@
         <th>Created By</th>
         <th>Created At</th>
         <th>Visits</th>
-        <th style="width: 80px"></th>
+        <th></th>
       </tr>
     </thead>
 
     <tbody>
       @for(url of urls; track url.id) {
       <tr>
-        <td>{{ url.originalUrl }}</td>
-        <td>
-          <a [href]="'https://localhost:7255/' + url.shortCode" target="_blank">
+        <td class="url-cell" [title]="url.originalUrl">
+          {{ url.originalUrl }}
+        </td>
+
+        <td class="shortcode-cell">
+          <a [href]="'/r/' + url.shortCode" target="_blank">
             {{ url.shortCode }}
           </a>
         </td>
-        <td>{{ url.createdBy }}</td>
-        <td>{{ url.createdAtUtc | date : 'short' }}</td>
-        <td>{{ url.visitCount }}</td>
+
+        <td class="createdby-cell">
+          {{ url.createdBy }}
+        </td>
+
         <td>
-          <button class="btn btn-danger btn-sm" (click)="deleteUrl(url.id)">Delete</button>
+          {{ url.createdAtUtc | date : 'short' }}
+        </td>
+
+        <td>{{ url.visitCount }}</td>
+
+        <td>
+          <button class="btn btn-danger btn-sm delete-btn" (click)="deleteUrl(url.id)">
+            Delete
+          </button>
         </td>
       </tr>
       }

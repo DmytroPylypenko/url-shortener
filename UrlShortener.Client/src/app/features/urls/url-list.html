@@ -24,10 +24,9 @@
       <tr>
         <th>Original URL</th>
         <th>Short Code</th>
-        <th>Created By</th>
-        <th>Created At</th>
-        <th>Visits</th>
+        @if(isAuthenticated){
         <th></th>
+        }
       </tr>
     </thead>
 
@@ -44,23 +43,15 @@
           </a>
         </td>
 
-        <td class="createdby-cell">
-          {{ url.createdBy }}
-        </td>
-
+        @if(isAuthenticated) {
         <td>
-          {{ url.createdAtUtc | date : 'short' }}
-        </td>
+          <a [href]="'/urls/info/' + url.id" class="btn btn-info btn-sm me-2">Info</a>
 
-        <td>{{ url.visitCount }}</td>
-
-        <td>
-          @if(isAuthenticated){
           <button class="btn btn-danger btn-sm delete-btn" (click)="deleteUrl(url.id)">
             Delete
           </button>
-          }
         </td>
+        }
       </tr>
       }
     </tbody>

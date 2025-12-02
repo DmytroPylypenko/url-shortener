@@ -1,0 +1,40 @@
+@model UrlShortener.Web.Domain.Entities.UrlRecord
+
+@{
+    ViewData["Title"] = $"Details for {Model.ShortCode}";
+}
+
+<div class="container mt-5">
+    <h2 class="mb-4">Short URL Details</h2>
+
+    <div class="card shadow-sm">
+        <div class="card-body">
+            <dl class="row">
+                <dt class="col-sm-3">Original URL</dt>
+                <dd class="col-sm-9"><a href="@Model.OriginalUrl" target="_blank">@Model.OriginalUrl</a></dd>
+
+                <dt class="col-sm-3">Short Code</dt>
+                <dd class="col-sm-9">
+                    <code>@Model.ShortCode</code>
+                    <a href="/r/@Model.ShortCode" target="_blank" class="btn btn-sm btn-outline-info ms-2">Redirect</a>
+                </dd>
+
+                <dt class="col-sm-3">Created By</dt>
+                <dd class="col-sm-9">@Model.CreatedByUser.Name</dd>
+
+                <dt class="col-sm-3">Created At (UTC)</dt>
+                <dd class="col-sm-9">@Model.CreatedAtUtc.ToLocalTime()</dd>
+
+                <dt class="col-sm-3">Total Visits</dt>
+                <dd class="col-sm-9">@Model.VisitCount</dd>
+
+                <dt class="col-sm-3">Last Accessed</dt>
+                <dd class="col-sm-9">@(Model.LastAccessedAtUtc.HasValue ? Model.LastAccessedAtUtc.Value.ToLocalTime().ToString() : "N/A")</dd>
+            </dl>
+        </div>
+    </div>
+    
+    <div class="mt-4">
+        <a href="/urls" class="btn btn-secondary">Back to List</a>
+    </div>
+</div>

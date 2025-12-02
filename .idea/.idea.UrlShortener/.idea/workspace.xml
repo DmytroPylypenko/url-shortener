@@ -10,8 +10,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="79f393e7-8b4f-42ce-be3c-7b0c2cd2f2f3" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/UrlShortener.Web/Views/Shared/_Layout.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/UrlShortener.Web/Views/Shared/_Layout.cshtml" afterDir="false" />
+    <list default="true" id="79f393e7-8b4f-42ce-be3c-7b0c2cd2f2f3" name="Changes" comment="feat(info): implement Short URL Info View and routing">
+      <change afterPath="$PROJECT_DIR$/UrlShortener.Web/Controllers/Mvc/InfoController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UrlShortener.Web/Views/Info/Index.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.UrlShortener/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UrlShortener/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UrlShortener.Client/src/app/features/urls/url-list.html" beforeDir="false" afterPath="$PROJECT_DIR$/UrlShortener.Client/src/app/features/urls/url-list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UrlShortener.Web/wwwroot/urls/browser/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/UrlShortener.Web/wwwroot/urls/browser/main.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,6 +29,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/679b53ae0e4d4c3ebcd7e2a98d8c1dfa36200/7c/d5b00cfd/RazorPage`1.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="mock:///home/dima/Dima/UrlShortener/UrlShortener.Client/angular.json" root0="FORCE_HIGHLIGHTING" />
     <setting file="mock:///home/dima/Dima/UrlShortener/UrlShortener.Client/angular.json" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/UrlShortener.Client/angular.json" root0="FORCE_HIGHLIGHTING" />
@@ -36,6 +41,7 @@
     <setting file="file://$PROJECT_DIR$/UrlShortener.Web/Controllers/Api/PublicUrlsController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="mock:///home/dima/Dima/UrlShortener/UrlShortener.Web/Controllers/Mvc/HomeController.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///home/dima/Dima/UrlShortener/UrlShortener.Web/Controllers/Mvc/HomeController.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/UrlShortener.Web/Controllers/Mvc/InfoController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="mock:///home/dima/Dima/UrlShortener/UrlShortener.Web/Controllers/Mvc/LoginController.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///home/dima/Dima/UrlShortener/UrlShortener.Web/Controllers/Mvc/LoginController.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/UrlShortener.Web/Controllers/Mvc/LoginController.cs" root0="FORCE_HIGHLIGHTING" />
@@ -68,6 +74,8 @@
     <setting file="file://$PROJECT_DIR$/UrlShortener.Web/Services/UrlShortening/UrlShorteningService.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="mock:///home/dima/Dima/UrlShortener/UrlShortener.Web/Views/Home/Index.cshtml" root0="FORCE_HIGHLIGHTING" root1="SKIP_HIGHLIGHTING" root2="FORCE_HIGHLIGHTING" />
     <setting file="mock:///home/dima/Dima/UrlShortener/UrlShortener.Web/Views/Home/Index.cshtml" root0="FORCE_HIGHLIGHTING" root1="SKIP_HIGHLIGHTING" root2="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/UrlShortener.Web/Views/Info/Index.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="FORCE_HIGHLIGHTING" />
+    <setting file="mock:///home/dima/Dima/UrlShortener/UrlShortener.Web/Views/Shared/_Layout.cshtml" root0="FORCE_HIGHLIGHTING" root1="SKIP_HIGHLIGHTING" root2="FORCE_HIGHLIGHTING" />
     <setting file="mock:///home/dima/Dima/UrlShortener/UrlShortener.Web/Views/Shared/_Layout.cshtml" root0="FORCE_HIGHLIGHTING" root1="SKIP_HIGHLIGHTING" root2="FORCE_HIGHLIGHTING" />
     <setting file="mock:///home/dima/Dima/UrlShortener/UrlShortener.Web/Views/Shared/_Layout.cshtml" root0="FORCE_HIGHLIGHTING" root1="SKIP_HIGHLIGHTING" root2="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/UrlShortener.Web/Views/Urls/Index.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="FORCE_HIGHLIGHTING" />
@@ -191,7 +199,7 @@
       <workItem from="1764592331872" duration="446000" />
       <workItem from="1764592860277" duration="12567000" />
       <workItem from="1764606935866" duration="2372000" />
-      <workItem from="1764685323183" duration="10011000" />
+      <workItem from="1764685323183" duration="11634000" />
     </task>
     <task id="LOCAL-00001" summary="chore: create ASP.NET Core MVC solution">
       <option name="closed" value="true" />
@@ -353,7 +361,15 @@
       <option name="project" value="LOCAL" />
       <updated>1764695051175</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="fix(layout): display user role in navbar when name claim is missing">
+      <option name="closed" value="true" />
+      <created>1764695455479</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1764695455479</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -393,7 +409,9 @@
     <MESSAGE value="feat(integration): connect Angular client build with ASP.NET Core backend" />
     <MESSAGE value="feat(fullstack): implement auth status check and improve UI navigation" />
     <MESSAGE value="feat(fullstack): finalize Angular integration, solve an navbar issue, create UrlsController.cs for entry point for Angular" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat(fullstack): finalize Angular integration, solve an navbar issue, create UrlsController.cs for entry point for Angular" />
+    <MESSAGE value="fix(layout): display user role in navbar when name claim is missing" />
+    <MESSAGE value="feat(info): implement Short URL Info View and routing" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat(info): implement Short URL Info View and routing" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

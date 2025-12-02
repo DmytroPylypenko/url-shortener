@@ -22,4 +22,12 @@
       <Folder Include="wwwroot\urls\" />
     </ItemGroup>
 
+    <ItemGroup>
+      <_ContentIncludedByDefault Remove="wwwroot\urls\browser\favicon.ico" />
+      <_ContentIncludedByDefault Remove="wwwroot\urls\browser\index.html" />
+      <_ContentIncludedByDefault Remove="wwwroot\urls\browser\main-L63YXKJF.js" />
+      <_ContentIncludedByDefault Remove="wwwroot\urls\browser\polyfills-5CFQRCPP.js" />
+      <_ContentIncludedByDefault Remove="wwwroot\urls\browser\styles-VRDYZCWE.css" />
+    </ItemGroup>
+
 </Project>

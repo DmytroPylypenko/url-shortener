@@ -17,6 +17,7 @@
         "build": {
           "builder": "@angular/build:application",
           "options": {
+            "outputHashing": "none",
             "outputPath": "../UrlShortener.Web/wwwroot/urls",
             "browser": "src/main.ts",
             "polyfills": [
@@ -49,7 +50,7 @@
                   "maximumError": "8kB"
                 }
               ],
-              "outputHashing": "all"
+              "outputHashing": "none"
             },
             "development": {
               "optimization": false,

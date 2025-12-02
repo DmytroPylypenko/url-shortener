@@ -87,25 +87,6 @@ public static class Program
         
         app.UseAuthentication();
         app.UseAuthorization();
-
-        // Serve Angular app from /urls
-        app.MapWhen(ctx => ctx.Request.Path.StartsWithSegments("/urls"), clientApp =>
-        {
-            clientApp.UseStaticFiles(new StaticFileOptions
-            {
-                FileProvider = new PhysicalFileProvider(
-                    Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "urls", "browser")
-                ),
-                RequestPath = "/urls"
-            });
-
-            clientApp.Run(async context =>
-            {
-                context.Response.ContentType = "text/html";
-                await context.Response.SendFileAsync(
-                    Path.Combine("wwwroot", "urls", "browser", "index.html"));
-            });
-        });
         
         app.MapControllerRoute(
             name: "redirect",

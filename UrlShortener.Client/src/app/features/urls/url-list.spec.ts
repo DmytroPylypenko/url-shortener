@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { UrlList } from './url-list';
+import { UrlListComponent as UrlList } from './url-list';
 
 describe('UrlList', () => {
   let component: UrlList;

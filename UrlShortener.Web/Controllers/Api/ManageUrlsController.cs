@@ -49,7 +49,7 @@ public class ManageUrlsController : ControllerBase
         // 2. Extract the user ID from JWT claims.
         string? userIdString = User.FindFirstValue(ClaimTypes.NameIdentifier);
         if (!int.TryParse(userIdString, out var userId)) 
-            return Unauthorized();
+            return Unauthorized(new { message = "You are not logged in.. Please log in to shorten URLs." });
         
         // 3. Delegate business logic to the shortening service.
         var record = await _shorteningService.CreateAsync(

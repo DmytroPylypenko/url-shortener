@@ -19,8 +19,23 @@ export class UrlListComponent {
   newUrl: string = '';
   errorMessage?: string;
 
+  isAuthenticated: boolean = false;
+
   ngOnInit(): void {
+    this.checkAuthStatus();
     this.loadUrls();
+  }
+
+  /** Checks if the user is logged in to toggle UI elements */
+  checkAuthStatus() {
+    this.urlsService.getAuthStatus().subscribe({
+      next: (status) => {
+        this.isAuthenticated = status.isAuthenticated;
+      },
+      error: () => {
+        this.isAuthenticated = false;
+      }
+    });
   }
 
   /** Loads all URL records from API */
@@ -55,9 +70,20 @@ export class UrlListComponent {
         this.errorMessage = undefined;
       },
       error: (err) => {
-        if (err.status === 409 || err.status === 400) {
+        // 1. Handle "Not Logged In"
+        if (err.status === 401) {
+          this.errorMessage = 'You must be logged in to shorten URLs.';
+        } 
+        // 2. Handle "Duplicate URL"
+        else if (err.status === 409) {
           this.errorMessage = 'This URL already exists.';
-        } else {
+        } 
+        // 3. Handle "Invalid Data"
+        else if (err.status === 400) {
+           this.errorMessage = 'Invalid URL format.';
+        }
+        // 4. Generic Fallback
+        else {
           this.errorMessage = 'Error creating URL.';
         }
       },

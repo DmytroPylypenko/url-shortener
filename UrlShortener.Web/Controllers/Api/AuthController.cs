@@ -75,4 +75,24 @@ public class AuthController : ControllerBase
 
         return Ok(response);
     }
+    
+    /// <summary>
+    /// Checks the current authentication status of the user based on the session cookie.
+    /// </summary>
+    /// <returns>
+    /// HTTP 200 with a JSON object containing an "isAuthenticated" boolean flag.
+    /// </returns>
+    [HttpGet("status")]
+    public IActionResult GetStatus()
+    {
+        if (User.Identity != null && User.Identity.IsAuthenticated)
+        {
+            return Ok(new 
+            { 
+                IsAuthenticated = true
+            });
+        }
+
+        return Ok(new { IsAuthenticated = false });
+    }
 }

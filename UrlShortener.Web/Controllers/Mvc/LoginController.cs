@@ -86,7 +86,7 @@ public class LoginController : Controller
     /// <summary>
     /// Logs the user out by removing the cookie.
     /// </summary>
-    [HttpPost]
+    [HttpGet]
     public IActionResult Logout()
     {
         Response.Cookies.Delete("auth_token");

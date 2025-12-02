@@ -8,6 +8,7 @@
   }
 
   <!-- Add new URL (only for authenticated users — protected by backend) -->
+  @if(isAuthenticated){
   <div class="card mb-4 p-3">
     <h5>Add a new URL</h5>
     <div class="input-group">
@@ -15,6 +16,7 @@
       <button class="btn btn-primary" (click)="createUrl()">Shorten</button>
     </div>
   </div>
+  }
 
   <!-- URL Table -->
   <table class="table table-striped">
@@ -53,9 +55,11 @@
         <td>{{ url.visitCount }}</td>
 
         <td>
+          @if(isAuthenticated){
           <button class="btn btn-danger btn-sm delete-btn" (click)="deleteUrl(url.id)">
             Delete
           </button>
+          }
         </td>
       </tr>
       }

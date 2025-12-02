@@ -5,6 +5,7 @@ import { inject } from '@angular/core';
 import { CreateShortUrlRequest, CreateShortUrlResponse } from '../../models/create-short-url';
 import { Observable } from 'rxjs';
 import { UrlRecordListItem } from '../../models/url-record';
+import { catchError, of } from 'rxjs';
 
 /**
  * Provides communication with the backend API for all URL-related operations.
@@ -15,6 +16,7 @@ import { UrlRecordListItem } from '../../models/url-record';
   providedIn: 'root',
 })
 export class UrlsService {
+  private readonly apiUrl = `${environment.apiUrl}/auth`;
   private readonly publicApi = `${environment.apiUrl}/public/urls`;
   private readonly manageApi = `${environment.apiUrl}/manage/urls`;
   private readonly http = inject(HttpClient);
@@ -56,5 +58,16 @@ export class UrlsService {
    */
   delete(id: number): Observable<void> {
     return this.http.delete<void>(`${this.manageApi}/${id}`, { withCredentials: true });
+  }
+
+  /**
+   * Checks if the user is currently authenticated by verifying the HTTP-only cookie.
+   * 
+   * @returns Observable emitting an object with the isAuthenticated flag.
+   */
+  getAuthStatus(): Observable<{ isAuthenticated: boolean }> {
+    return this.http.get<{ isAuthenticated: boolean }>(
+      `${this.apiUrl}/status`, { withCredentials: true }
+    );
   }
 }

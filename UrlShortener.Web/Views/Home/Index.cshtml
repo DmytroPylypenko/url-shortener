@@ -2,7 +2,22 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div class="px-4 py-5 my-5 text-center">
+    <h1 class="display-5 fw-bold text-body-emphasis">URL Shortener</h1>
+    <div class="col-lg-6 mx-auto">
+        <p class="lead mb-4">
+            A simple, efficient tool to shorten your links. 
+            Admins can manage all links, users can manage their own, and everyone can view the list.
+        </p>
+        <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+            
+            <a href="/urls" class="btn btn-primary btn-lg px-4 gap-3">
+                View Shortened URLs
+            </a>
+            
+            <a asp-controller="Home" asp-action="About" class="btn btn-outline-secondary btn-lg px-4">
+                How it Works
+            </a>
+        </div>
+    </div>
 </div>

@@ -1,8 +1,7 @@
 using Microsoft.EntityFrameworkCore;
-using UrlShortener.Web.Domain.Entities;
-using UrlShortener.Web.Domain.Interfaces;
-
-namespace UrlShortener.Web.Persistence.Repositories;
+using UrlShortener.Domain.Entities;
+using UrlShortener.Domain.Interfaces;
+namespace UrlShortener.Infrastructure.Persistence.Repositories;
 
 /// <summary>
 /// Provides user-related data access operations using Entity Framework Core.

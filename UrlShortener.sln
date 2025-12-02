@@ -4,6 +4,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UrlShortener.Web", "UrlShor
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UrlShortener.Tests", "UrlShortener.Tests\UrlShortener.Tests.csproj", "{BB69D496-8D54-4C50-993F-0BD94BD109BE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UrlShortener.Domain", "UrlShortener.Domain\UrlShortener.Domain.csproj", "{935861E6-A627-4730-A12B-7A0BEA0F2407}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UrlShortener.Infrastructure", "UrlShortener.Infrastructure\UrlShortener.Infrastructure.csproj", "{59B9B503-A471-467B-A13B-D0876CFF92EA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UrlShortener.Application", "UrlShortener.Application\UrlShortener.Application.csproj", "{C0C5FA4B-4B1A-4D54-8F77-52881699C6BB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,5 +24,17 @@ Global
 		{BB69D496-8D54-4C50-993F-0BD94BD109BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BB69D496-8D54-4C50-993F-0BD94BD109BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BB69D496-8D54-4C50-993F-0BD94BD109BE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{935861E6-A627-4730-A12B-7A0BEA0F2407}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{935861E6-A627-4730-A12B-7A0BEA0F2407}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{935861E6-A627-4730-A12B-7A0BEA0F2407}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{935861E6-A627-4730-A12B-7A0BEA0F2407}.Release|Any CPU.Build.0 = Release|Any CPU
+		{59B9B503-A471-467B-A13B-D0876CFF92EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{59B9B503-A471-467B-A13B-D0876CFF92EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{59B9B503-A471-467B-A13B-D0876CFF92EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{59B9B503-A471-467B-A13B-D0876CFF92EA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C0C5FA4B-4B1A-4D54-8F77-52881699C6BB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C0C5FA4B-4B1A-4D54-8F77-52881699C6BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C0C5FA4B-4B1A-4D54-8F77-52881699C6BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C0C5FA4B-4B1A-4D54-8F77-52881699C6BB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

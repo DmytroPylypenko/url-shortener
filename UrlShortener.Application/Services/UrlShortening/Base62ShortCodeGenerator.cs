@@ -1,7 +1,7 @@
 using System.Security.Cryptography;
-using UrlShortener.Web.Domain.Interfaces;
+using UrlShortener.Domain.Interfaces;
 
-namespace UrlShortener.Web.Services.UrlShortening;
+namespace UrlShortener.Application.Services.UrlShortening;
 
 /// <summary>
 /// Generates short codes using Base62 encoding (0-9, a-z, A-Z).

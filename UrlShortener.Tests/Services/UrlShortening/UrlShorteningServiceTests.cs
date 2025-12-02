@@ -1,8 +1,8 @@
 using FluentAssertions;
 using Moq;
-using UrlShortener.Web.Domain.Entities;
-using UrlShortener.Web.Domain.Interfaces;
-using UrlShortener.Web.Services.UrlShortening;
+using UrlShortener.Application.Services.UrlShortening;
+using UrlShortener.Domain.Entities;
+using UrlShortener.Domain.Interfaces;
 
 namespace UrlShortener.Tests.Services.UrlShortening;
 

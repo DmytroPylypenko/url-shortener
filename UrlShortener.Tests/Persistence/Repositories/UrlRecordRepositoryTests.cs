@@ -1,8 +1,8 @@
 using FluentAssertions;
 using Microsoft.EntityFrameworkCore;
-using UrlShortener.Web.Domain.Entities;
-using UrlShortener.Web.Persistence;
-using UrlShortener.Web.Persistence.Repositories;
+using UrlShortener.Domain.Entities;
+using UrlShortener.Infrastructure.Persistence;
+using UrlShortener.Infrastructure.Persistence.Repositories;
 
 namespace UrlShortener.Tests.Persistence.Repositories;
 

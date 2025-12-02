@@ -1,9 +1,9 @@
 using FluentAssertions;
 using Microsoft.AspNetCore.Mvc;
 using Moq;
+using UrlShortener.Domain.Entities;
+using UrlShortener.Domain.Interfaces;
 using UrlShortener.Web.Controllers.Mvc;
-using UrlShortener.Web.Domain.Entities;
-using UrlShortener.Web.Domain.Interfaces;
 
 namespace UrlShortener.Tests.Controllers.Mvc;
 

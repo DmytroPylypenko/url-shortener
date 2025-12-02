@@ -1,6 +1,6 @@
-using UrlShortener.Web.Domain.Entities;
+using UrlShortener.Domain.Entities;
 
-namespace UrlShortener.Web.Domain.Interfaces;
+namespace UrlShortener.Domain.Interfaces;
 
 /// <summary>
 /// Provides high-level operations for creating and validating short URLs.

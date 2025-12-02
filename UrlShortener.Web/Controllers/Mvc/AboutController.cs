@@ -1,8 +1,8 @@
 using System.Security.Claims;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using UrlShortener.Web.Domain.Entities;
-using UrlShortener.Web.Domain.Interfaces;
+using UrlShortener.Domain.Entities;
+using UrlShortener.Domain.Interfaces;
 
 namespace UrlShortener.Web.Controllers.Mvc;
 

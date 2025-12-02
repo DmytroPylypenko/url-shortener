@@ -1,7 +1,7 @@
 using System.Security.Claims;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using UrlShortener.Web.Domain.Interfaces;
+using UrlShortener.Domain.Interfaces;
 using UrlShortener.Web.Models.Url;
 
 namespace UrlShortener.Web.Controllers.Api;

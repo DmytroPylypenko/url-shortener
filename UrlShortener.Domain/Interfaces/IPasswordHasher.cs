@@ -1,4 +1,4 @@
-namespace UrlShortener.Web.Domain.Interfaces;
+namespace UrlShortener.Domain.Interfaces;
 
 /// <summary>
 /// Defines methods for password hashing and verification services.

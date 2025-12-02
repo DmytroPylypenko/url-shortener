@@ -1,6 +1,6 @@
-using UrlShortener.Web.Domain.Entities;
+using UrlShortener.Domain.Entities;
 
-namespace UrlShortener.Web.Domain.Interfaces;
+namespace UrlShortener.Domain.Interfaces;
 
 /// <summary>
 /// Provides data-access operations for <see cref="UrlRecord"/> entities,

@@ -1,7 +1,7 @@
-using UrlShortener.Web.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
+using UrlShortener.Domain.Entities;
 
-namespace UrlShortener.Web.Persistence;
+namespace UrlShortener.Infrastructure.Persistence;
 
 /// <summary>
 /// Represents the Entity Framework Core database context for the application.

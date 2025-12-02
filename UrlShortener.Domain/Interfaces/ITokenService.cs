@@ -1,6 +1,6 @@
-using UrlShortener.Web.Domain.Entities;
+using UrlShortener.Domain.Entities;
 
-namespace UrlShortener.Web.Domain.Interfaces;
+namespace UrlShortener.Domain.Interfaces;
 
 /// <summary>
 /// Defines the contract for a service that creates JWT tokens.

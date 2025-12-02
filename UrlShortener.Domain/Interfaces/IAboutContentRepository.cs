@@ -1,6 +1,7 @@
-using UrlShortener.Web.Domain.Entities;
 
-namespace UrlShortener.Web.Domain.Interfaces;
+using UrlShortener.Domain.Entities;
+
+namespace UrlShortener.Domain.Interfaces;
 
 /// <summary>
 /// Defines data access operations for the static <see cref="AboutContent"/> record,

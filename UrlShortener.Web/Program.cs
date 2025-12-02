@@ -1,14 +1,13 @@
 using System.Text;
 using Microsoft.IdentityModel.Tokens;
-using UrlShortener.Web.Domain.Interfaces;
-using UrlShortener.Web.Services.Auth;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.FileProviders;
+using UrlShortener.Application.Services.Auth;
+using UrlShortener.Application.Services.UrlShortening;
+using UrlShortener.Domain.Interfaces;
+using UrlShortener.Infrastructure.Persistence;
+using UrlShortener.Infrastructure.Persistence.Repositories;
 using UrlShortener.Web.Configuration;
-using UrlShortener.Web.Persistence;
-using UrlShortener.Web.Persistence.Repositories;
-using UrlShortener.Web.Services.UrlShortening;
 
 namespace UrlShortener.Web;
 

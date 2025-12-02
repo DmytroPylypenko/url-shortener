@@ -1,4 +1,4 @@
-namespace UrlShortener.Web.Domain.Interfaces;
+namespace UrlShortener.Domain.Interfaces;
 
 /// <summary>
 /// Defines an algorithm for generating short alphanumeric URL codes.

@@ -1,6 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 
-namespace UrlShortener.Web.Domain.Entities;
+namespace UrlShortener.Domain.Entities;
 
 /// <summary>
 /// Represents an application user who can authenticate and create short URLs.

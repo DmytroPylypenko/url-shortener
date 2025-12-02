@@ -1,7 +1,9 @@
-using UrlShortener.Web.Domain.Entities;
-using UrlShortener.Web.Domain.Interfaces;
 
-namespace UrlShortener.Web.Services.UrlShortening;
+
+using UrlShortener.Domain.Entities;
+using UrlShortener.Domain.Interfaces;
+
+namespace UrlShortener.Application.Services.UrlShortening;
 
 /// <summary>
 /// Implements the business logic for generating short URLs,

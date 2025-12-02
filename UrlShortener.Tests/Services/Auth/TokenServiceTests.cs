@@ -2,8 +2,8 @@ using System.IdentityModel.Tokens.Jwt;
 using FluentAssertions;
 using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
-using UrlShortener.Web.Domain.Entities; 
-using UrlShortener.Web.Services.Auth;   
+using UrlShortener.Application.Services.Auth;
+using UrlShortener.Domain.Entities;
 
 namespace UrlShortener.Tests.Services.Auth;
 
@@ -31,7 +31,7 @@ public class TokenServiceTests
     public void CreateToken_WhenGivenUser_ShouldReturnValidJwtToken()
     {
         // Arrange
-        var user = new UrlShortener.Web.Domain.Entities.User
+        var user = new UrlShortener.Domain.Entities.User
         {
             Id = 101,
             Email = "test@example.com",

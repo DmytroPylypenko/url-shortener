@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using UrlShortener.Web.Domain.Interfaces;
+using UrlShortener.Domain.Interfaces;
 
 namespace UrlShortener.Web.Controllers.Mvc;
 
@@ -26,7 +26,7 @@ public class InfoController : Controller
     /// <param name="id">The unique ID of the URL record.</param>
     /// /// <param name="token">Cancellation token.</param>
     /// <returns>A view displaying the detailed information.</returns>
-    [HttpGet("urls/info/{id:int}")] // Defines a clear, specific route
+    [HttpGet("details/{id:int}")] // Defines a clear, specific route
     public async Task<IActionResult> Index(int id, CancellationToken token)
     {
         if (id <= 0)

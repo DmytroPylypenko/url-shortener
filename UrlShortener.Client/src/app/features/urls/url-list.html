@@ -45,7 +45,7 @@
 
         @if(isAuthenticated) {
         <td>
-          <a [href]="'/urls/info/' + url.id" class="btn btn-info btn-sm me-2">Info</a>
+          <a [href]="'/info/details/' + url.id" class="btn btn-info btn-sm me-2">Info</a>
 
           <button class="btn btn-danger btn-sm delete-btn" (click)="deleteUrl(url.id)">
             Delete

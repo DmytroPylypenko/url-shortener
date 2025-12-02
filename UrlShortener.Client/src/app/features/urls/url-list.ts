@@ -4,11 +4,10 @@ import { UrlRecordListItem } from '../../models/url-record';
 import { UrlsService } from '../../core/services/urls-service';
 import { CreateShortUrlRequest } from '../../models/create-short-url';
 import { FormsModule } from '@angular/forms';
-import { DatePipe } from '@angular/common';
 
 @Component({
   selector: 'app-url-list',
-  imports: [FormsModule, DatePipe],
+  imports: [FormsModule],
   templateUrl: './url-list.html',
   styleUrl: './url-list.scss',
 })

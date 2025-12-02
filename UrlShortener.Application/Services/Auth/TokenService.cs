@@ -1,11 +1,12 @@
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
+using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
-using UrlShortener.Web.Domain.Entities;
-using UrlShortener.Web.Domain.Interfaces;
+using UrlShortener.Domain.Entities;
+using UrlShortener.Domain.Interfaces;
 
-namespace UrlShortener.Web.Services.Auth;
+namespace UrlShortener.Application.Services.Auth;
 
 /// <summary>
 /// Implements the ITokenService to generate JWT tokens.

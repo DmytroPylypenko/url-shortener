@@ -1,6 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 
-namespace UrlShortener.Web.Domain.Entities;
+namespace UrlShortener.Domain.Entities;
 
 /// <summary>
 /// Represents a shortened URL entry created by a user.
